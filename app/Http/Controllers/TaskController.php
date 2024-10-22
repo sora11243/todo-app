@@ -40,10 +40,9 @@ class TaskController extends Controller
         Validator::make($request->all(), $rules, $messages)->validate();
         //モデルをインスタンス化
         $task = new Task;
-
         //モデル->カラム名 = 値 で、データを割り当てる
         $task->name = $request->input('task_name');
-
+        $task->category = $request->input('category');
         //データベースに保存
         $task->save();
 

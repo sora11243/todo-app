@@ -38,7 +38,13 @@
                             </div>
                             @enderror
                         </label>
-
+                        <label for="category-select">内容</label>
+                        <select category="category">
+                            <option value=""></option>
+                            <option value="sigoto">仕事</option>
+                            <option value="syumi">趣味</option>
+                            <option value="sikyu">至急</option>
+                        </select>
                         <button type="submit"
                             class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
                             追加する
