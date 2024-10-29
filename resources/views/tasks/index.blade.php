@@ -39,11 +39,11 @@
                             @enderror
                         </label>
                         <label for="category-select">内容</label>
-                        <select category="category">
-                            <option value=""></option>
-                            <option value="sigoto">仕事</option>
-                            <option value="syumi">趣味</option>
-                            <option value="sikyu">至急</option>
+                        <select name="task_category">
+                            <option value="選択なし">選択なし</option>
+                            <option value="仕事">仕事</option>
+                            <option value="趣味">趣味</option>
+                            <option value="至急">至急</option>
                         </select>
                         <button type="submit"
                             class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
@@ -75,6 +75,7 @@
                                         <td class="px-3 py-4 text-sm text-gray-500">
                                             <div>
                                                 {{ $item->name }}
+                                                {{ $item->category}}
                                             </div>
                                         </td>
                                         <td class="p-0 text-right text-sm font-medium">

@@ -38,6 +38,17 @@
                                 </p>
                             </div>
                             @enderror
+                            <label for="category-select">内容</label>
+                            <select name="task_category">
+                                @foreach($categories as $category)
+                                <option value="{{$task->category}}" @if(task_category=task_category)selected @endif>
+                                    {{$task->category}}</option>
+                                @endforeach
+                                <option value="選択なし">選択なし</option>
+                                <option value="仕事">仕事</option>
+                                <option value="趣味">趣味</option>
+                                <option value="至急">至急</option>
+                            </select>
                         </label>
 
                         <div class="mt-8 w-full flex items-center justify-center gap-10">
