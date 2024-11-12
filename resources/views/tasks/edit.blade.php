@@ -40,7 +40,7 @@
                             @enderror
                             <label for="category-select">内容</label>
                             <select name="task_category">
-                                @foreach($task as $value)
+                                @foreach($categorys as $value)
                                 <option value="{{$task->category}}" @if($task->category==$value)selected @endif>
                                     {{$task->category}}</option>
                                 @endforeach
