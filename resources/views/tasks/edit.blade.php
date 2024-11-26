@@ -41,7 +41,7 @@
                             <label for="category-select">内容</label>
                             <select name="task_category">
                                 @foreach($category as $value)
-                                <option value="{{$task->category}}" @if($task->category==$value)selected @endif>
+                                <option value="{{$task->category}}" @if ($task->category==$value)selected @endif>
                                     {{$task->category}}</option>
                                 @endforeach
                                 <option value="選択なし">選択なし</option>

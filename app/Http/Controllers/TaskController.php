@@ -15,8 +15,9 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::where('status', false)->get();
+        $categories = Categoy::get();
 
-        return view('tasks.index', compact('tasks', 'categorys'));
+        return view('tasks.index', compact('tasks', 'categories'));
     }
 
     /**
@@ -64,6 +65,7 @@ class TaskController extends Controller
     public function edit(string $id)
     {
         $task = Task::find($id);
+        $category = Categoy::get();
 
         return view('tasks.edit', compact('task', 'category'));
     }

@@ -40,10 +40,11 @@
                         </label>
                         <label for="category-select">内容</label>
                         <select name="task_category">
-                            <option value="選択なし">選択なし</option>
-                            <option value="仕事">仕事</option>
-                            <option value="趣味">趣味</option>
-                            <option value="至急">至急</option>
+                            @foreach($categories as $value)
+                            <option>
+                                {{$value->name}}
+                            </option>
+                            @endforeach
                         </select>
                         <button type="submit"
                             class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
